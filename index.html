@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="px-5 py-5 xl:w-full min-h-screen xl:px-0 bg-gray-100 flex justify-center items-center">
+        <div class="w-full md:w-[450px]">
+            <h2 class="text-center font-bold text-xl text-gray-800">Expense Tracker</h2>
+            <div class="mt-3">
+                <h3  class=" text-sm uppercase font-semibold">Your balance : </h3>
+                <h4 id="balance-display" class="text-xl uppercase font-bold">$0.00</h4>
+            </div>
+            <div class="mt-5 shadow bg-white shadow-md relative shadow-gray-300 flex items-start">
+                <div class="flex-1 text-center py-3">
+                    <h5 class="text-sm font-semibold uppercase">Income</h5>
+                    <h4 id="income-display" class="text-sm md:text-lg font-bold mt-1 text-green-500">$0.00</h4>
+                </div>
+                <div class="w-[2px] h-[50px] bg-gray-200 absolute left-[50%] top-[50%] translate-y-[-50%] translate-x-[-50%]"></div>
+                <div class="flex-1 text-center py-3">
+                    <h5 class="text-sm font-semibold uppercase">Expense</h5>
+                    <h4 id="expense-display" class="text-sm md:text-lg font-bold mt-1 text-red-500">$0.00</h4>
+                </div>
+            </div>
+            <div class="mt-7">
+                <h4 class="text-sm font-semibold border-b border-gray-300 pb-2">History</h4>
+                <div class="history-container flex flex-col gap-y-2 mt-4"></div>
+            </div>
+            <div class="mt-7">
+                <h4 class="text-sm font-semibold border-b border-gray-300 pb-2">Add new transaction</h4>
+                <form class="py-3 flex flex-col gap-y-2">
+                    <div class="flex flex-col gap-y-1">
+                        <label class="text-sm">Text</label>
+                        <input id="text" type="text" class="w-full bg-white py-2 px-2 outline-none text-sm border border-gray-200">
+                    </div>
+                    <div class="flex flex-col gap-y-1">
+                        <label class="text-sm">Amout</label>
+                        <input id="amount" type="number" class="w-full bg-white py-2 px-2 outline-none text-sm border border-gray-200">
+                    </div>
+                    <div class="flex flex-col gap-y-1">
+                        <label class="text-sm">Type</label>
+                        <select id="type" class="w-full text-sm bg-white py-2 px-2 outline-none text-sm border border-gray-200">
+                            <option>Choose the type</option>
+                            <option value="expense">Expense</option>
+                            <option value="income">Income</option>
+                        </select>
+                    </div>
+                    <button type="button" id="add-transaction" class="bg-indigo-400 text-white w-full py-2 rounded-sm text-[12px] mt-5 font-semibold">Add transaction</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
